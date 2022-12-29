@@ -40,10 +40,10 @@ console.log(pokemonUrl)
  function pokemonList(item){
      return `
         <div class='${item.types.map((teste) => teste.type.name)}'>
-                
-                <img  src = "${item.sprites.back_default}"/>
-                <h1>${item.id}</h1>
-                <h2> ${item.name}</h2>      
+               
+                <img  class='img'src = "${item.sprites.back_default}"/> 
+                <h1 class='id'>#${item.id}</h1>
+                <h2 class='name'> ${item.name}</h2>      
         </div>   
         `
   } 

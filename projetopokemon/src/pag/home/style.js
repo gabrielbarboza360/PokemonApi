@@ -13,6 +13,33 @@ export const Global = styled.div`
   margin: 0px;
   padding: 0px;
   display: grid;
+
+ .id{
+  color: #86898C;
+  margin: 0px;
+  padding: 0px;
+  padding-left: 20px;
+}
+ }
+
+ .img{
+  display: flex;
+    width: 10rem;
+    margin: auto;
+    margin-top: 20px;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.41);
+    border-radius: 200px;
+ }
+
+ .name{
+  text-align: center;
+  margin: 0px;
+  margin-top: 10px;
+  font-family: arial;
+}
+ }
+
 `
 
 
@@ -142,4 +169,7 @@ grid-gap: 20px;
       
     }
 
+
+
+    
 `
