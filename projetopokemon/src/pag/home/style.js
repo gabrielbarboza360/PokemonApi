@@ -8,14 +8,15 @@ import styled from "styled-components";
 
 
 
-
 export const Global = styled.div`
   margin: 0px;
   padding: 0px;
   display: grid;
+  
 
  .id{
-  color: #86898C;
+  font-size: 14pt;
+  color: rgba(0, 0, 0, 0.44);
   margin: 0px;
   padding: 0px;
   padding-left: 20px;
@@ -25,18 +26,19 @@ export const Global = styled.div`
  .img{
   display: flex;
     width: 10rem;
+    height:160px;
     margin: auto;
     margin-top: 20px;
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.41);
-    border-radius: 200px;
+    border-radius: 50px;
  }
 
  .name{
   text-align: center;
   margin: 0px;
   margin-top: 10px;
-  font-family: arial;
+  font-family: 'East Sea Dokdo', cursive;
 }
  }
 
@@ -155,6 +157,7 @@ grid-gap: 20px;
 
     box-shadow: 4px 4px 20px #0000003d;
     width: 300px;
+    cursor:pointer;
     height: 280px;
     margin-top: 90px;
     border-radius: 20px;
@@ -169,7 +172,7 @@ grid-gap: 20px;
       
     }
 
-
+  
 
     
 `
