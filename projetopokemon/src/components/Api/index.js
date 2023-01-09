@@ -6,7 +6,7 @@
 
 
 // ============================== Request API ========================================
-function requestApi(offset= 0, limit= 10){
+ function requestApi(offset= 0, limit= 10){
     
             const url = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`;
 
@@ -18,7 +18,8 @@ function requestApi(offset= 0, limit= 10){
                      fetch(pokemon.url)
                         .then((resultUrl)=> resultUrl.json())
                         .then( (requestComplet) => document.getElementById('contPokemon').innerHTML += pokemonList(convertPokeApiMyModel(requestComplet)))
-                        //.then(document.getElementById('contPokemon').innerHTML += pokemonList)
+                        //.then( (requestComplet) => document.getElementById('specification').innerHTML += ///// specificationPokemon(convertPokeApiMyModel(requestComplet)))
+                      //  .then(document.getElementById('contPokemon').innerHTML += pokemonList)
  )
 }) 
            .catch((error) => console.error(error))
@@ -50,6 +51,10 @@ class Pokemon {
         type;
         types = [];
         photo;
+        weight;
+        height;
+        abilities;
+
 }
 
 
@@ -62,18 +67,60 @@ function convertPokeApiMyModel(model){
                 pokemon.types = types
                 pokemon.type = type
                 pokemon.photo = model.sprites.other.dream_world.front_default
+                pokemon.weight = model.weight
+                pokemon.height = model.height
+                pokemon.abilities = model.abilities.map((typeAbilities)=>typeAbilities.ability.name )
+
                return pokemon
 }  
 
 
-function 
+
+function specificationPokemon(pokemon){
+
+        return `
+        <div class= '${pokemon.type}' id='border'>
+
+        <div class='contImg'>
+           <img  class='img'src = "${pokemon.photo}"/> 
+        </div>
+
+           <div class='about'>
+                <h2 class='name'>${pokemon.name} #00${pokemon.number}</h2>   
+                <h3 class='type'>Type: ${pokemon.type}</h3>
+                <h3 class='weight'>Weight: ${pokemon.weight}Kg</h3>
+                <h3 class='height'>Height: ${pokemon.height}</h3>
+                <h3 class='abilities'>Abilities: ${pokemon.abilities
+                }</h3> 
+           </div>    
+</div>  
+                `
+}
+
+
+/*
+<div id= 'cont'>
+
+                    <div class='contImg'>
+                       <img  class='img'src = "${pokemon.photo}"/> 
+                    </div>
+
+                       <div class='about'>
+                            <h2 class='name'>${pokemon.name} ${pokemon.number}</h2>   
+                            <h3 class='type'>${pokemon.type}</h3>
+                            <h3 class='height'>height 100</h3>
+                            <h4 class='abilites'>abilities</h4> 
+                       </div>    
+</div> 
 
 
 
+
+*/
 
 
 //===================================================
-requestApi()
+requestApi() 
 
 
 
