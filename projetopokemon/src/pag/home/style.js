@@ -377,59 +377,5 @@ div{
  }
 }
 
-
-
-
 `
 
-/*   =============================== tamanho : web
-
-#cont{
-  display:block;
-}
-
-div{
-background-color: black;
-color:white;
- display:flex;
- width:710px;
- height:508px;
- margin:auto;
- border-radius: 20px;
-
-.contImg{
-  background:red;
-  width: 550px;
-
-  h1{
-    width:100%
-  }
-}
-
-
-      @media (min-width:540px){ 
- .about{
-  display: block;
-  margin-left: 40px;
- }
-
- .name{
-  margin-top: 50px;
-  margin-bottom:50px;
- }
-
- .type{
-  margin-top: 50px;
-  margin-bottom:50px;
- }
-
- .height{
-  margin-top: 50px;
-  margin-bottom:50px;
- }
-
-  .abilites{
-  margin-top: 50px;
-  margin-bottom:50px;
- }}
-} */
